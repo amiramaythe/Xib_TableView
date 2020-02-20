@@ -22,9 +22,7 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
 
 }
 
@@ -35,8 +33,9 @@ extension ViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "idCell") as! TableViewCell
-        cell.userAge.text = ages[indexPath.row]
+
         cell.userName.text = names[indexPath.row]
+        cell.userAge.text = ages[indexPath.row]
         cell.userImage.image = UIImage(named: names[indexPath.row])
 
         return cell
